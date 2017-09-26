@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="BlueTravel.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+   <%-- <script type="text/javascript"></script>
+    <!--调用JS模块图片滚动--%>
+
+    <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+
+    <link href="/css/pagename.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+
+    <script type="text/javascript" src="/js/jquery.SuperSlide.2.1.js"></script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--header开始-->
+        <div class="header">
+            <div class="w1000">
+                <p>你好，欢迎光临绿城之都南宁！</p>
+            </div>
+        </div>
+        <div class="w1000">
+            <div class="header_bottom">
+               
+                    <img src="images/logo.jpg" width="294" height="49" alt="" title="绿城之都-南宁" />
+                <ul>
+                    <li><a href="Index.aspx">网站首页</a></li>
+                    <li><a href="Historic.aspx">历史</a></li>
+                    <li><a href="Beautiful.aspx">风景</a></li>
+                    <li><a href="Tourism.aspx">旅游</a></li>
+                    <li><a href="Delicacy.aspx">美食</a></li>
+                    <li><a href="News.aspx">动态</a></li>
+                    <li><a href="About.aspx">团队介绍</a></li>
+                    <li><a href="Connection.aspx">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--header结束-->
+        <div class="container">
+            <!--banner开始-->
+            <div class="banner">
+                <div class="bd">
+                    <ul>
+                  
+                      <li style="background: url(images/banner_4.jpg) no-repeat center top;"></li>
+                        <li style="background: url(images/banner_2.jpg) no-repeat center top;"></li>
+                    </ul>
+                </div>
+                <div class="hd">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+            </div>
+            <!--banner结束-->
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--footer开始-->
+
+        <div class="footer">
+
+            <p>
+                <a href="Index.aspx">首页</a> | <a href="Historic.aspx">历史</a> | <a href="Beautiful.aspx">风景</a> | <a href="Tourism.aspx">旅游</a> | <a href="Delicacy.aspx">美食</a> | <a href="News.aspx">动态</a> |  <a href="Connection.aspx">联系我们</a>
+            </p>
+            <p>Copyright &copy; 2015－2016 All Rights Reserved 版权所有 wjkhkjsfsasaf</p>
+            <p>地址：信阳职业技术学院信息工程学院  来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a> </p>
+        </div>
+        <!--footer 结束-->
+    </form>
+            <script type="text/javascript">
+            jQuery(".banner").slide({ titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", delayTime: 1000, interTime: 5000, autoPlay: true, autoPage: true, trigger: "click" });
+            jQuery(".picScroll-left").slide({ titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "left", autoPlay: true, vis: 4, trigger: "click" });
+        </script>
+  
+</body>
+</html>

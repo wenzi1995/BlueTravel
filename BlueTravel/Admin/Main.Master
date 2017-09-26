@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="BlueTravel.Admin.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>『文子』后台管理</title>
+     <link rel="stylesheet" type="text/css" href="assets/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <script type="text/javascript" src="assets/js/libs/modernizr.min.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+ <div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="Indexs.aspx">首页</a></li>
+                <li><a href="/index.aspx">网站首页</a></li>
+            </ul>
+        </div>
+          <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+               
+                <li>
+                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">登出</asp:LinkButton>
+                </li>
+            </ul>
+          </div>
+    </div>
+ </div>
+ <div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="indexs.aspx"><i class="icon-font">&#xe003;</i>新闻管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="NewList.aspx"><i class="icon-font">&#xe006;</i>新闻列表</a></li>
+                        <li><a href="NewEdit.aspx"><i class="icon-font">&#xe012;</i>发布新闻</a></li>
+                       </ul>
+                </li>
+                <li>
+                    <a href="SelUser.aspx"><i class="icon-font">&#xe018;</i>系统管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="SelUser.aspx"><i class="icon-font">&#xe010;</i>管理员列表</a></li>
+                        <li><a href="AddUser.aspx"><i class="icon-font">&#xe014;</i>添加管理员</a></li>
+                        <li><a href="xgUser.aspx"><i class="icon-font">&#xe016;</i>修改密码</a></li>  
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    
+    <!--/main-->
+</div>
+
+    
+    </form>
+</body>
+</html>
